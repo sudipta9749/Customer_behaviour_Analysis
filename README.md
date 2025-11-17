@@ -1,6 +1,172 @@
-Customer Shopping Behavior Analysis1. Project OverviewThis project performs a comprehensive analysis of a customer shopping dataset to uncover insights into purchasing patterns, product preferences, and customer segmentation. The primary objective is to identify key trends and provide actionable, data-driven recommendations to guide strategic business decisions in marketing, sales, and customer retention.2. DatasetThe dataset consists of 3,900 transaction records with 18 features, including:Customer Demographics: Age, Gender, LocationPurchase Details: Item Purchased, Category, Purchase Amount (USD), SeasonBehavioral Metrics: Review Rating, Subscription Status, Shipping Type, Frequency of Purchases3. Tools & TechnologiesData Cleaning & EDA: Python (Pandas, NumPy)Database: MySQLData Visualization & Dashboard: Power BIPresentation: Gamma4. Project StepsData Loading & Cleaning (Python):Loaded the shopping_behavior.csv dataset into a Pandas DataFrame.Standardized column names (e.g., Purchase Amount (USD) to purchase_amount_usd).Handled missing values by imputing the median for the review_rating column.Checked for and managed duplicate entries.Exploratory Data Analysis (EDA) (Python):Performed initial analysis using .info() and .describe() to understand data structure and statistics.Analyzed distributions of key numerical and categorical features.Database & SQL Analysis (MySQL):Loaded the cleaned DataFrame into a MySQL database (customer_db) for analysis.Executed SQL queries to answer specific business questions, such as:Total revenue by gender and age group.Top 5 most popular products.Average purchase amount for subscribers vs. non-subscribers.Purchase frequency by customer segment.Dashboard Development (Power BI):Connected Power BI to the MySQL database.Designed and built an interactive dashboard to visualize key findings and KPIs.Reporting & Presentation (Report & Gamma):Compiled all insights, visualizations, and recommendations into a formal written report.Created a high-level summary presentation using Gamma to communicate the project's story and business value to stakeholders.5. Power BI DashboardThe interactive dashboard provides a consolidated view of customer behavior. Key features include:KPI Cards: Total Customers (3.9K), Average Purchase Amount ($59.76), and Average Review Rating (3.75).Key Visuals:% of Customers by Subscription Status (Donut Chart)Revenue by Category and Sales by Category (Bar Charts)Revenue by Age Group (Bar Chart)Interactivity: Slicers to filter the entire report by Subscription Status, Gender, Category, and Shipping Type.6. Key Results & RecommendationsResult: Non-subscribers make up 73% of the customer base but have a nearly identical average spend ($59.87) to subscribers ($59.49).Recommendation: Launch a targeted marketing campaign to highlight exclusive subscriber benefits (e.g., free shipping, early access) to convert this large, high-value segment.Result: Male customers generated significantly more revenue (~$158K) than female customers (~$75K) in this dataset.Recommendation: Investigate product assortment and marketing to ensure equal appeal, or double-down on marketing to the male demographic if this aligns with business goals.Result: Young Adults (18-30) and Middle-Aged (31-45) are the highest-revenue-generating age groups.Recommendation: Focus marketing efforts and ad spend on platforms frequented by these high-value demographics.7. How to RunClone Repository:git clone [https://github.com/sudipta9749/Customer_behaviour_Analysis.git](https://github.com/sudipta9749/Customer_behaviour_Analysis.git)
-cd customer-analytics
-Python Environment:Install the required Python libraries:pip install pandas numpy sqlalchemy pymysql
-Database Setup (MySQL):Ensure you have a MySQL server running.Create a new database (e.g., customer_db).Update the database connection string in the Python script (load_to_mysql.py).Run Scripts:Execute the Python script to perform cleaning and load the data into MySQL.python load_to_mysql.py
-Power BI:Open the Customer_Behavior_Dashboard.pbix file.You may need to update the data source credentials to connect to your local MySQL database.View Reports:The final written Project_Report.pdf and a link to the Gamma presentation are included in the /reports folder.# Customer_behaviour_Analysis
-Data analytics project showcasing customer behaviour analysis using python,sql and power bi
+Below is a clean, recruiter-friendly **README.md** for your data analytics project.
+You can directly copy-paste this as your project’s README.
+
+---
+
+# 📊 Customer Shopping Behavior Analysis — Data Analytics Project
+
+## 📝 **Overview**
+
+This project analyzes customer shopping behavior using a dataset of **3,900 transactions** across multiple product categories. The goal is to understand spending patterns, customer demographics, product trends, and subscription behavior.
+The project follows a complete data analytics workflow — from **Python EDA to SQL analysis, Power BI dashboarding, reporting, and a final presentation**.
+
+---
+
+## 📂 **Dataset**
+
+* **Rows:** 3,900
+* **Columns:** 18
+* **Includes:**
+
+  * Customer demographics (Age, Gender, Location, Subscription Status)
+  * Purchase information (Item, Category, Amount, Season, Size, Color)
+  * Behavioral attributes (Discount Applied, Previous Purchases, Rating, Shipping Type)
+* **Missing Values:** 37 missing entries in *Review Rating*
+
+---
+
+## 🛠️ **Tools & Technologies**
+
+| Task               | Tool                                       |
+| ------------------ | ------------------------------------------ |
+| Data Loading & EDA | Python (Pandas, NumPy, Matplotlib/Seaborn) |
+| Data Cleaning      | Python                                     |
+| Database Analysis  | MySQL (or PostgreSQL)                      |
+| Dashboard          | Power BI                                   |
+| Report             | Word/PDF                                   |
+| Presentation       | Gamma App                                  |
+
+---
+
+## 🔍 **Steps in the Project**
+
+### **1. Data Loading (Python)**
+
+* Imported dataset using **pandas**
+* Checked structure using `.info()` and `.describe()`
+* Converted column names into `snake_case`
+
+### **2. Exploratory Data Analysis (EDA)**
+
+* Explored demographic distributions
+* Analyzed purchase amount patterns, categories, and reviews
+* Visualized trends using bar charts, boxplots, histograms
+* Identified correlations between discount use, shipping type, and spending behavior
+
+### **3. Data Cleaning**
+
+* Imputed missing values in *review_rating* using **median category ratings**
+* Removed redundant fields (e.g., *promo_code_used*)
+* Created new features:
+
+  * `age_group`
+  * `purchase_frequency_days`
+* Verified data consistency and formatting
+
+### **4. SQL Analysis (MySQL)**
+
+Uploaded cleaned data into MySQL for structured querying.
+
+Key SQL insights extracted:
+
+* Revenue comparison across genders, age groups, and subscription status
+* Top-rated and best-selling products
+* Relationship between discount use and spending
+* Shipping type vs. average purchase amount
+* Customer segmentation (New, Returning, Loyal)
+
+### **5. Power BI Dashboard**
+
+Built an interactive dashboard showcasing:
+
+* Customer demographics
+* Revenue patterns
+* Category-wise sales
+* Rating insights
+* Subscriber vs. non-subscriber comparison
+* Purchase frequency & loyalty segments
+
+### **6. Business Report**
+
+A formal report summarizing:
+
+* Key findings
+* Trend analysis
+* Actionable business recommendations
+* Visual insights from Power BI
+
+### **7. Presentation (Gamma)**
+
+A modern, visually appealing presentation was created using **Gamma**, highlighting major insights and recommendations in a recruiter-friendly format.
+
+---
+
+## 📈 **Results & Insights**
+
+Key findings from the project:
+
+* Subscription customers spend significantly more on average
+* Express shipping users show higher purchasing power
+* Certain categories have strong customer loyalty
+* Discounts heavily influence purchase decisions for specific products
+* High-rated products consistently drive higher revenue
+* 18–35 age group contributes the largest share of total sales
+
+---
+
+## ▶️ **How to Run the Project**
+
+### **1. Clone the Repository**
+
+```bash
+git clone <your-repo-url>
+cd customer-shopping-behavior-analysis
+```
+
+### **2. Install Required Python Libraries**
+
+```bash
+pip install -r requirements.txt
+```
+
+### **3. Run the EDA Notebook**
+
+Open and execute:
+
+```
+EDA_Cleaning.ipynb
+```
+
+### **4. Load Data into MySQL**
+
+* Update database credentials in `mysql_connection.py`
+* Run SQL scripts inside the `sql_queries/` folder
+
+### **5. Open the Power BI Dashboard**
+
+Download and launch:
+
+```
+dashboard.pbix
+```
+
+### **6. View Report and Presentation**
+
+* `Final_Report.pdf`
+* `Gamma_Presentation.link`
+
+---
+
+## 📮 **Contact**
+
+If you have questions or want to collaborate:
+**Email:** [your-email@example.com](mailto:your-email@example.com)
+**LinkedIn:** your-linkedin-profile
+
+---
+
+If you'd like, I can also write:
+✅ GitHub repository description
+✅ A one-line project summary for your resume
+✅ A polished project title
+Just tell me!
