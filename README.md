@@ -157,14 +157,6 @@ dashboard.pbix
 
 ---
 
-## 📮 **Contact**
-
-If you have questions or want to collaborate:
-**Email:** [your-email@example.com](mailto:your-email@example.com)
-**LinkedIn:** your-linkedin-profile
-
----
-
 If you'd like, I can also write:
 ✅ GitHub repository description
 ✅ A one-line project summary for your resume
